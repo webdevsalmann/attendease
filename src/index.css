@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+ 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .max-container {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    /* ===========================================================================
+    DEFAULT BEHAVIOUR
+    =========================================================================== */
+    body {
+        text-rendering: optimizeLegibility;
+        @apply relative mx-auto max-w-[23rem] set-bg font-inter text-dark dark:text-light;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-mont font-bold;
+    }
+
+
+
+    h1 {
+        @apply text-4xl;
+    }
+
+    h2 {
+        @apply text-3xl;
+    }
+
+    h3 {
+        @apply text-2xl;
+    }
+
+    h4 {
+        @apply text-xl;
+    }
+
+    h5 {
+        @apply text-lg;
+    }
+
+    h6 {
+        @apply text-base;
+    }
+
+    p {
+        @apply text-base text-text-balance dark:text-Dtext-balance;
+    }
+
+    a {
+        @apply text-base text-focus hover:text-focus-light focus:text-focus-light dark:hover:text-focus-light dark:focus:text-focus-light;
+    }
+
+    svg,
+    img {
+        @apply w-full h-full object-cover;
+    }
+
+    button,
+    textarea,
+    input {
+        @apply accent-p dark:accent-Dp
+    }
+
+
+    /* ===========================================================================
+    COMMON CLASSES
+    =========================================================================== */
+    .set-bg {
+        @apply bg-bg dark:bg-Dbg;
+    }
+
+    .set-bg-light {
+        @apply bg-bg-light dark:bg-Dbg-light;
+    }
+
+    .set-bg-dark {
+        @apply bg-bg-dark dark:bg-Dbg-dark;
+    }
+
+    .clr-p {
+        @apply text-p dark:text-Dp hover:text-p dark:hover:text-Dp;
+    }
+
+    .text-a {
+        @apply text-dark dark:text-light hover:text-light dark:hover:text-dark;
+    }
+
+    .text {
+        @apply text-dark dark:text-light;
+    }
+
+    .text-balance {
+        @apply text-text-balance dark:text-Dtext-balance;
+    }
+
+    .text-balance-hover {
+        @apply text-text-balance hover:text-dark dark:text-Dtext-balance dark:hover:text-light
+    }
+
+    .flex-center,
+    .icon-box {
+        @apply flex justify-center items-center;
+    }
+
+    .flex-between {
+        @apply flex justify-between items-center;
+    }
+
+    /* ===========================================================================
+    BUTTON
+    =========================================================================== */
+    .btn {
+        @apply py-2 px-4 text-base capitalize inline-flex flex-center gap-2 border-transparent font-semibold whitespace-nowrap rounded-md transition-all focus:outline-2 focus:outline focus:outline-focus focus:outline-offset-0;
+    }
+
+    .btn-solid {
+        @apply btn bg-p dark:bg-Dp text-light dark:text-dark hover:bg-dark dark:hover:bg-light focus:outline-offset-2;
+    }
+
+    .btn-soft {
+        @apply btn bg-slate-600 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-800 text-light hover:text-dark dark:text-light dark:hover:text-light;
+    }
+
+    .btn-outline {
+        @apply btn text hover:bg-slate-300 dark:hover:bg-slate-700 outline outline-offset-[-2px] outline-2 outline-gray-300 dark:outline-slate-700 focus:bg-slate-300 dark:focus:bg-slate-700 focus:outline-focus dark:focus:outline-focus;
+    }
+
+    .btn-ghost {
+        @apply btn text hover:bg-slate-300 dark:hover:bg-slate-700;
+    }
+
+    .btn-link {
+        @apply btn text-focus hover:text-focus-dark dark:hover:text-focus-light;
+    }
+
+    .btn-ghost-link {
+        @apply btn text-focus hover:text-focus-dark dark:hover:text-focus-light hover:bg-slate-200 dark:hover:bg-slate-700 focus:bg-slate-300 dark:focus:bg-slate-700;
+    }
+
+    .btn-icon {
+        @apply btn aspect-square p-[2px];
+    }
+
+    .btn-danger {
+        @apply btn bg-red text-white hover:bg-red-dark focus:outline-none focus:ring-2 focus:ring-red focus:ring-offset-2 dark:focus:ring-offset-gray-200;
+    }
+}
